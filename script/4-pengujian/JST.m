@@ -25,7 +25,7 @@ function [netFix,akurasi,CM] = JST(dataLatih, maxAttemps, dataUji, kelas)
     N = size(dataLatih,2); % N = ukuran data
     n = N/kelas;           % n = pembagian ukuran data untuk target setiap kelas
     for i = 1:kelas
-        targets(i,(n*(i-1))+1:n) = ones;
+        targets(i,(n*(i-1))+1:(n*i)) = ones;
     end
 
         akurasiTotal = 0;
